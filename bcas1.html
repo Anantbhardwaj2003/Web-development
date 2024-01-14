@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>bcas</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(253, 252, 250);
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            background: #f19f3e;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 20px;
+            text-align: center;
+            color: black;
+            font-size: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 100%;
+            line-height: 49.03px;
+            word-wrap: break-word;
+        }
+
+        .photo {
+            flex: 0 0 auto;
+            margin-left: 151px;
+        }
+
+        .img {
+            width: 120px;
+            height: 120px;
+            margin-left: 327px;
+            padding-right: 55%;
+        }
+
+        .content {
+            flex: 1;
+            width: 50%;
+            text-align: center;
+        }
+
+        .headings {
+            font-size: 33px;
+            font-weight: bold;
+            text-align: center;
+            width: 60%;
+            margin-right: 30px;
+        }
+
+        .rank {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 22.53px;
+            word-wrap: break-word;
+            text-align: center;
+            margin-right: 45%;
+        }
+
+        .link {
+            color: black;
+            font-size: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            word-wrap: break-word;
+        }
+
+        .headings,
+        .rank,
+        .link {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        li,
+        a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            color: orange;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 2px;
+            padding-left: 20%;
+            padding-right: 17%;
+        }
+
+        .nav_links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav_links li {
+            margin: 0 20px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: orange;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            border-radius: 20%;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: orange;
+        }
+
+        .quick-links {
+            font-size: 17px;
+            font-weight: bold;
+            background: #B8AC8C;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+            margin-top: 2px;
+            margin-right: 1%;
+        }
+
+        .quick-links::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #B8AC8C;
+            transform: skewX(-20deg);
+            transform-origin: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info">
+        <div class="photo">
+            <img class="img" src="image 1.png" alt="Image" />
+        </div>
+        <div class="content">
+            <div class="headings">Bhaskaracharya College<br />Of Applied Sciences</div>
+            <div class="rank">University Of Delhi<br />NAAC Grade A++<br />NIRF Rank # 22 (Amongst Colleges)<br /></div>
+        </div>
+        <div class="quick-links">Quick links/></div>
+    </div>
+    <nav>
+        <ul class="nav_links">
+            <li class="dropdown">
+                <a href="#">About</a>
+                <div class="dropdown-content">
+                    <a href="#">Overview</a>
+                    <a href="#">History</a>
+                    <a href="#">Mission & Vision</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Apply</a>
+                <div class="dropdown-content">
+                    <a href="#">Admissions</a>
+                    <a href="#">Scholarships</a>
+                    <a href="#">Application Form</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Academics</a>
+                <div class="dropdown-content">
+                    <a href="#">Programs</a>
+                    <a href="#">Departments</a>
+                    <a href="#">Academic Calendar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">News & Events</a>
+                <div class="dropdown-content">
+                    <a href="#">Latest News</a>
+                    <a href="#">Events Calendar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Faculty</a>
+                <div class="dropdown-content">
+                    <a href="#">Teaching Staff</a>
+                    <a href="#">Research</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

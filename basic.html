@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard with Line Graph</title>
+  <link rel="stylesheet" href="ripple.css">
+  <style type="text/css">
+    .chartBox {
+      width: 100px;
+    }
+  </style>
+  <!-- Add jQuery and QuickChart.js scripts -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5"> <!-- Changed width to 40% -->
+        <!-- Chart Parameters Box -->
+        <div id="chart-parameters">
+          <!-- Checkboxes for Prakriti Types -->
+          <div class="form-group">
+            <label for="prakriti_types"><u><b>Select Prakriti(s)</b></u></label>
+            <select id="prakriti_types" class="form-control">
+              <option input="">Vata</option>
+              <option input="">Pita</option>
+              <option input="">Kapha</option>
+              <option input="">Vata-Pita</option>
+              <option input="">Vata-Kapha</option>
+              <option input="">Pita-Vata</option>
+              <option input="">Pita-Kapha</option>
+              <option input="">Kapha-vata</option>
+              <option input="">Kapha-Pita</option>
+              <option input="">Sam</option>
+            </select>
+          </div>
+
+          <!-- Selects for Attributes -->
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="hematology">Hematology:</label>
+              <select id="hematology" class="form-control">
+                <!-- Options for Hematology attributes -->
+                <option value="3,2,6,5,1,3,13,11,3,4,7,9">Basophils percent</option>
+                <option value="2,6,3,5,2,1">Eosinophils percent</option>
+                <option value="9,3,6,6,2,5">ESR Absolute</option>
+                <option value="5,2,6,4,1,3">Haemoglobin Absolute</option>
+                <option value="5,2,6,4,1,3">Lymphocytes percent</option>
+                <option value="5,2,6,4,1,3,11,2,13,8,3,4,5,7,4">Monocytes percent</option>
+                <option value="5,2,6,4,1,3">Neurtrophils percent</option>
+                <option value="5,2,6,4,1,3">Platelet Count Absolute</option>
+                <option value="5,2,6,4,1,3">TLC percent</option>
+                <option value="5,2,6,4,1,3">Total RBC Count Absolute</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="KFT">KFT:</label>
+              <select id="KFT" class="form-control">
+                <!-- Options for KFT attributes -->
+                <option value="3,3,6,6,2,6,2,12,13,4,8,9">Serum Urea</option>
+                <option value="2,6,3,5,2,1">Serum Bun</option>
+                <option value="5,2,6,4,1,3,11,10,6,3,4,9,12">Serum creatinine level</option>
+                <option value="5,2,6,4,1,3">Serum uric Acid</option>
+                <option value="5,2,6,4,1,3">Serum Sodium</option>
+                <option value="5,2,6,4,1,3">Serum Potassium</option>
+                <option value="5,2,6,4,1,3">Serum Calcium</option>
+                <option value="5,2,6,4,1,3">Triglyceride level</option>
+                <option value="5,2,6,4,1,3">Total Cholestrol level</option>
+                <option value="5,2,6,4,1,3">HDL Cholestrol level</option>
+                <option value="5,2,6,4,1,3">LDL Cholestrol level</option>
+                <option value="5,2,6,4,1,3">VLDL Cholestrol level</option>
+                <option value="5,2,6,4,1,3">T3</option>
+                <option value="5,2,6,4,1,3">T4</option>
+                <option value="5,2,6,4,1,3">TSH</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Additional pairs for LFT, Urine, Stool -->
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="LFT">LFT:</label>
+              <select id="LFT" class="form-control">
+                <!-- Options for LFT attributes -->
+                <option value="3,3,6,6,2,6">Total Bilirubin</option>
+                <option value="2,6,3,5,2,1">Conjugated Bilirubin</option>
+                <option value="5,2,6,4,1,3">Alanine transminase(ALT)</option>
+                <option value="5,2,6,4,1,3">Aspartate transminase(AST)</option>
+                <option value="5,2,6,4,1,3">Alkaline phosphatase(ALP)</option>
+                <option value="5,2,6,4,1,3">Gamma glutamyl transpeptidase(GGT)</option>
+                <option value="5,2,6,4,1,3">Total Protein</option>
+                <option value="5,2,6,4,1,3">Albumin</option>
+                <option value="5,2,6,4,1,3">Globulin</option>
+                <option value="5,2,6,4,1,3">A:G ratio</option>
+                <option value="5,2,6,4,1,3">HBsAg</option>
+                <option value="5,2,6,4,1,3">Anti HCV</option>
+              </select>
+
+              <label for="Urine">Urine:</label>
+              <select id="Urine" class="form-control">
+                <!-- Options for Urine attributes -->
+                <option value="3,3,6,6,2,6">Urine Glucose</option>
+                <option value="2,6,3,5,2,1">Urine Bile Pigment</option>
+                <option value="5,2,6,4,1,3">Urine Bile Salt</option>
+                <option value="5,2,6,4,1,3">Urine Blood</option>
+                <option value="5,2,6,4,1,3">Urine Urobilinogen</option>
+                <option value="5,2,6,4,1,3">Urine Ketone</option>
+                <option value="5,2,6,4,1,3">Urine Pus Cell</option>
+                <option value="5,2,6,4,1,3">Urine Epithelial Cell</option>
+                <option value="5,2,6,4,1,3">Urine Cast</option>
+                <option value="5,2,6,4,1,3">Urine RBC</option>
+                <option value="5,2,6,4,1,3">Urine Crystal</option>
+                <option value="5,2,6,4,1,3">Urine Bacteria</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Additional pairs for Stool and Chart Type -->
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="Stool">Stool:</label>
+              <select id="Stool" class="form-control">
+                <!-- Options for Stool attributes -->
+                <option value="3,3,6,6,2,6">Stool Sugar</option>
+                <option value="2,6,3,5,2,1">Stool Bile Pigment</option>
+                <option value="5,2,6,4,1,3">Stool Bile Salt</option>
+                <option value="5,2,6,4,1,3">Stool Parasites</option>
+                <option value="5,2,6,4,1,3">Stool Mucous</option>
+                <option value="5,2,6,4,1,3">Stool Vegetative Cell</option>
+                <option value="5,2,6,4,1,3">Stool Occult Blood</option>
+                <option value="5,2,6,4,1,3">Stool Pus Cell</option>
+                <option value="5,2,6,4,1,3">Stool Epithelial Cell</option>
+                <option value="5,2,6,4,1,3">Stool RBC</option>
+              </select>
+
+              <label for="chartTypecustom">Chart Type:</label>
+              <select id="chartTypecustom" class="form-control">
+                <option value="bar">Bar Chart</option>
+                <option value="line">Line Chart</option>
+                <option value="scatter">Scatter Plot</option>
+                <option value="radar">Radar Chart</option>
+                <!--Add more chart types as needed -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Button to Generate Chart -->
+          <div class="form-group">
+            <button id="generateChartButton" class="btn btn-primary">Generate Chart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="chart-container">
+          <div id="customchart">
+            <canvas id="myChart" width="10" height="10"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Red', 'green', 'blue', 'yellow', 'violet', 'orange', 'Magenta'],
+        datasets: [{
+          label: 'Hematology',
+          data: [7, 7, 3, 2, 3, 4, 13, 5, 5, 7, 8, 3, 3, 4, 2],
+          backgroundColor: [
+            'rgba(255,65,89,5)',
+            'rgba(255,56,3,0.2)',
+            'rgba(34,56,89,1.9)',
+            'rgba(153,34,89,0.4)',
+            'rgba(12,45,67,9)',
+            'rgba(34,67,34,0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54,162,236,1)',
+            'rgba(255,206,86,1)',
+            'rgba(75,192,192,1)',
+            'rgba(153,102,255,34)',
+            'rgba(255,89,34,0)'
+          ],
+          borderWidth: 2
+        },
+        {
+          label: 'LFT',
+          data: [11, 4, 6, 13, 3, 5, 3, 3, 5, 4, 5, 8, 6, 12,5],
+          backgroundColor: [
+            'rgba(255,65,89,5)',
+            'rgba(255,56,3,0.2)',
+            'rgba(255,56,89,1.9)',
+            'rgba(253,34,89,0.4)',
+            'rgba(22,45,67,9)',
+            'rgba(44,67,34,0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54,162,236,1)',
+            'rgba(255,206,86,1)',
+            'rgba(75,192,192,1)',
+            'rgba(153,102,255,34)',
+            'rgba(255,89,34,0)'
+          ],
+          borderWidth: 2
+        },
+        {
+          label: 'KFT',
+          data: [2, 5, 3, 5, 5, 3,4,12,11,,6,7,8,3,6,7],
+          backgroundColor: [
+            'rgba(255,65,89,5)',
+            'rgba(255,56,3,0.2)',
+            'rgba(34,56,89,1.9)',
+            'rgba(153,34,89,0.4)',
+            'rgba(12,45,67,9)',
+            'rgba(34,67,34,0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54,162,236,1)',
+            'rgba(255,206,86,1)',
+            'rgba(75,192,192,1)',
+            'rgba(153,102,255,34)',
+            'rgba(255,89,34,0)'
+          ],
+          borderWidth: 2
+        },
+        {
+          label: 'Urine',
+          data: [1, 5, 3, 6, 2, 3,12,3,5,2,6,7,9,0,3],
+          backgroundColor: [
+            'rgba(255,65,89,5)',
+            'rgba(255,56,3,0.2)',
+            'rgba(34,56,89,1.9)',
+            'rgba(153,34,89,0.4)',
+            'rgba(12,45,67,9)',
+            'rgba(34,67,34,0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54,162,236,1)',
+            'rgba(255,206,86,1)',
+            'rgba(75,192,192,1)',
+            'rgba(153,102,255,34)',
+            'rgba(255,89,34,0)'
+          ],
+          borderWidth: 2
+        },
+        {
+          label: 'Stool',
+          data: [7, 1, 3, 5, 2, 3,12,11,7,9,10,3,5,6,12],
+          backgroundColor: [
+            'rgba(255,65,89,5)',
+            'rgba(255,56,3,0.2)',
+            'rgba(34,56,89,1.9)',
+            'rgba(153,34,89,0.4)',
+            'rgba(12,45,67,9)',
+            'rgba(34,67,34,0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54,162,236,1)',
+            'rgba(255,206,86,1)',
+            'rgba(75,192,192,1)',
+            'rgba(153,102,255,34)',
+            'rgba(255,89,34,0)'
+          ],
+          borderWidth: 2
+        }
+
+        ]
+      },
+      options: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    });
+    const hematology = document.getElementById('hematology');
+    hematology.addEventListener('change', prakritiTracker);
+    function prakritiTracker() {
+      console.log(hematology.value.split(','));
+      hematology.value.split(',');
+      ///const label=hematology.options[hematology.selectedIndex].text;
+      // myChart.data.datasets[0].label=label;
+      myChart.data.datasets[0].data = hematology.value.split(',');
+      myChart.update();
+    }
+    const KFT = document.getElementById('KFT');
+    KFT.addEventListener('change', salesTracker);
+    function salesTracker() {
+      console.log(KFT.value.split(','));
+      KFT.value.split(',');
+      myChart.data.datasets[0].data = KFT.value.split(',');
+      myChart.update();
+    }
+    const LFT = document.getElementById('LFT');
+    LFT.addEventListener('change', salest);
+    function salest() {
+      console.log(LFT.value.split(','));
+      LFT.value.split(',');
+      myChart.data.datasets[0].data = LFT.value.split(',');
+      myChart.update();
+    }
+
+
+  </script>
+
+
+
+</body>
+
+</html>

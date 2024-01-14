@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>bcas</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(253, 252, 250);
+        font-family: 'Poppins', sans-serif;
+    }
+    /* Style for the info container */
+.info {
+    display: flex;
+    align-items: center;
+    background: #f19f3e;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+
+/* Style for the photo container */
+.photo {
+    flex: 0 0 auto; /* Don't grow or shrink */
+    margin-left: 151px; /* Adjust the margin as needed */
+}
+
+/* Style for the image */
+.img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-left:327px;
+}
+
+/* Style for the content container */
+.content {
+    flex: 1; /* Grow to fill remaining space */
+    text-align: center;
+    width: 50%;
+}
+
+/* Other styles for headings and rank as needed */
+.headings {
+    font-size: 33px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 60%;
+    margin-right: 20px;
+}
+
+.rank {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    width:60%;
+}
+
+
+ .info {
+        text-align: center;
+        color: black;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+        line-height: 49.03px;
+        word-wrap: break-word;
+        background: #f19f3e;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .rank {
+        text-align: center;
+        color: black;
+        font-size: 17px;
+        font-family:Arial, Helvetica, sans-serif ;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 22.53px;
+        word-wrap: break-word;
+    }
+    .img{
+        width:100px;
+        height: auto;
+        padding-right: 55%;
+    }
+    .link{
+        color: black; 
+        font-size: 30px; 
+        font-family: Outfit; 
+        font-weight: 500; 
+        text-transform: uppercase; 
+        word-wrap: break-word;
+    }
+    .headings{
+        height: auto;
+    }
+   li ,a{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: orange;
+        text-decoration: none;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top:2px ;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .nav_links{
+        list-style: none;
+    }
+    .nav_links li{
+        display: inline-block;
+        padding: 2px 60px;
+        list-style: none;
+    }
+    .nav_links li a:hover{
+        color: orangered;
+    }
+    /* Style for the dropdown */
+    nav{
+        text-align: center;
+    }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the dropdown link */
+.dropdown a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color:orange;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 20%;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Style for the dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hover effect to show the dropdown content */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style for the dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: orange;
+}
+.quick-links{
+    font-size: 18px;
+    font-weight: bold;
+    background: #B8AC8C;
+    padding: 15px;
+    border-radius: 20px;
+    position: relative;
+}
+/* Add a pseudo-element for the tilted background */
+.quick-links::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #B8AC8C;
+    transform: skewX(-20deg); /* Adjust the degree to control the tilt */
+    transform-origin: 100%;
+    z-index: -1;
+}
+
+
+</style>
+
+<body>
+    <div class="info">
+        <div class="headings">
+            bhaskaracharya college<br />of applied sciences</div>
+    <div class="rank">University Of Delhi<br />NAAC Grade A++ <br />NIRF Rank # 22 (Amongst Colleges)<br /></div>
+    </div>
+    <div class="info">
+        <div class="photo">
+            <img class="img" src="image 1.png" alt="Image" />
+        </div>
+        <div class="content">
+            <div class="headings">
+                Bhaskaracharya College<br />Of Applied Sciences
+            </div>
+            <div class="rank">
+                University Of Delhi<br />NAAC Grade A++<br />NIRF Rank # 22 (Amongst Colleges)<br />
+            </div>
+        </div>
+        <div class="quick-links">
+            Quick links>
+        </div>
+    </div>
+    <nav>
+        <ul class="nav_links">
+            <li class="dropdown">
+                <a href="#">About</a>
+                <div class="dropdown-content">
+                    <a href="#">Overview</a>
+                    <a href="#">History</a>
+                    <a href="#">Mission & Vision</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Apply</a>
+                <div class="dropdown-content">
+                    <a href="#">Admissions</a>
+                    <a href="#">Scholarships</a>
+                    <a href="#">Application Form</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Academics</a>
+                <div class="dropdown-content">
+                    <a href="#">Programs</a>
+                    <a href="#">Departments</a>
+                    <a href="#">Academic Calendar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">News & Events</a>
+                <div class="dropdown-content">
+                    <a href="#">Latest News</a>
+                    <a href="#">Events Calendar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Faculty</a>
+                <div class="dropdown-content">
+                    <a href="#">Teaching Staff</a>
+                    <a href="#">Research</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>

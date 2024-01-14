@@ -1,0 +1,128 @@
+/* Body and container styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color:ghostwhite;
+    /*background-image: url("https://i.pinimg.com/originals/bd/a5/91/bda591b6202244c51e1fb69662af849a.jpg");  Background color for the entire page */
+    margin: 0;
+    padding: 0;
+}
+ .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #ffffff; 
+    /*background-image: url("https://images.vexels.com/media/users/1925/71811/raw/a0adccbce7cb1dea129bd6052dd4904f-neon-glow-shiny-energy-lines-background.jpg");*/
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Form and input styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333; /* Text color */
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Highlighta color on focus */
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+/* Chart Box styles */
+#customchart {
+    background-color: #ffffff; /* Background color for the chart container */
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 73%;
+
+    position: absolute;
+    top: 60px;
+    right: 90px;
+    left: 750px;
+    width: 35%; /* Adjust the width as needed */
+}
+
+/* Chart Parameters Box styles */
+#chart-parameters {
+    background-color: #f4f4f4; /* Background color for the parameters box */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Label styles */
+label {
+    font-weight: bold;
+    color: #333; /* Text color for labels */
+}
+
+/* Dropdown select styles */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333; /* Text color for select options */
+    transition: border-color 0.2s ease-in-out;
+}
+
+select:focus {
+    border-color:#f9f9f9;
+}
+/* Updated CSS to achieve left-right layout */
+/* Container styles remain the same */
+
+/* Prakriti Types (left side) */
+.col-md-5 {
+    width: 40%; /* Adjust the width as needed */
+    padding-right: 20px; /* Add some spacing between the left and right columns */
+}
+
+/* Chart Box (right side) */
+.col-md-7 {
+    width: 60%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Use flexbox for positioning */
+    /*flex-direction: row; /* Column layout for the content */
+    justify-content: flex-end; /* Align content to the top of the column */
+    /*align-items: flex-end; /* Align content to the left of the column */
+}
+
+/* Chart Parameters Box styles */
+
+
+/* Rest of the styles remain the same */
+/* Add CSS to position the customchart on the right side */
+
+
+/* Adjust the height of the chart canvas as needed */
+#myChart {
+    height: 100px; /* Set your desired height */
+    width: 100%; /* Ensure it takes the full width of the column */
+}
+

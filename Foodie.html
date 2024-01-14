@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie | Home</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0; ;
+        background: url('foodie.jpg')
+    }
+    .left{
+        display: inline-block;
+        position: absolute;
+        left: 34px;
+        top: 20px;
+    }
+    .left img{
+        width: 69px;
+        position: relative;
+        filter: invert(0%);
+    }
+    .left div{
+        text-align: center;
+        line-height: 16px;
+        font-size: 16px;
+    }
+    .mid{
+        display: block;
+        margin:  20px auto;
+        width: 45%;
+        font-family: 'arial';
+    }
+    .right{
+        display: inline-block;
+        position:absolute;
+        right:34px;
+        top: 20px;
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 15.63px;
+    }
+    .navbar li a{
+        color:wheat;
+        text-decoration: none;
+        padding: 23px 23px;
+    }
+    .navbar li a:hover, .navbar li a.active{
+        text-decoration: underline;
+        color:yellow;
+    }
+    .col{
+        color:wheat;
+        text-decoration: underline;
+        font-family: arial;
+    }
+    .btn{
+        margin: 0px 9px;
+        color: white;
+        background-color: black;
+        padding: 3px 4px;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: arial;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: grey;
+    }
+    .container{
+        margin: 50px 500px;
+        padding: 60px ;
+        border: 2px solid black ;
+        width: 15% ;
+        border-radius: 28px;
+        text-align: center;
+        text-decoration: underline;
+        font-style: normal;
+        font-family: arial;
+        color: black;
+        font-size: medium;
+    }
+    .formgroup input{
+        text-align: center;
+        font-size: medium;
+        font-family: arial;
+        border: 2px solid black;
+        text-decoration: dotted;
+        color: black;
+    }
+    .container h1{
+        text-align: center;
+        font-size: xx-large;
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="https://cdn5.f-cdn.com/contestentries/1015573/2934001/590b18a1acdb6_thumb900.jpg" alt="foodie logo">
+            <div class="col">
+                Healthy Foodie
+            </div>
+        </div>
+        <div class="mid">
+            <!-- for navigation bar -->
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">BMI Calculator</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- for putting buttons -->
+            <button class="btn">Queries</button>
+            <button class="btn">email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Welcome to our Foodie Family</h1>
+        <form action="noaction.php">
+            <div class="formgroup">
+                <input type="text" name=" " placeholder="Enter your name">
+                <input type="number" name=" " placeholder="Age">
+                <input type="date" name=" " placeholder="Date of birth">
+                <input type="text" name=" " placeholder="Type of food ">
+                <input type="text" name=" " placeholder="Contact no.">
+                <input type="email" name=" " placeholder="Email id">
+                <input type="text" name=" " placeholder="Phone No.">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>

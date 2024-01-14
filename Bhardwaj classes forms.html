@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission of forms</title>
+</head>
+<body>
+    <img src="http://bhardwajclasses.com/wp-content/uploads/2019/01/cropped-logobc.jpg" alt="Bharwaj Classes logo">
+    <h1>Forms To be filled</h1>
+    <form action="backend.php">
+        <label for="name">Name:</label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <label for="roll">Roll_no.:</label>
+        <div>
+            <input type="number" name="myRoll" id="roll">
+        </div>
+        <br>
+        <label for="eemail">Email_id:</label>
+        <div>
+            <input type="email" name="myEmail" id="eemail">
+        </div>
+        <br>
+        <div>
+            Are you eligible:<input type="checkbox" name="myEligibility">
+        </div>
+        <br>
+        <div>
+            Gender:Male<input type="radio" name="myGender"> Female<input type="radio" name="myGender"> others<input type="radio" name="myGender">
+        </div>
+        <br>
+        <div>
+            Date of joining:<input type="date" name="myDate"> 
+        </div>
+        <br>
+        <div>
+            Write about yourself:<br><textarea name="text" cols="30" rows="16"></textarea> 
+        </div>
+        <br>
+        <div>
+            <label for="car">Car:</label>
+            <select name="mycar" id="car">
+                <option value="ind">Indica</option>
+                <option value="alto">Alto</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+</body>
+</html>
